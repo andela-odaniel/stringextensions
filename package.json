@@ -4,7 +4,7 @@
   "description": "a few useful extensions to the default string class",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/_mocha"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/andela-odaniel/stringextensions/issues"
   },
-  "homepage": "https://github.com/andela-odaniel/stringextensions#readme"
+  "homepage": "https://github.com/andela-odaniel/stringextensions#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.8.1",
+    "mocha": "^3.1.2"
+  }
 }
