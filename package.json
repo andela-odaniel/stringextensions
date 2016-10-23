@@ -1,0 +1,27 @@
+{
+  "name": "stringextensions",
+  "version": "1.0.0",
+  "description": "a few useful extensions to the default string class",
+  "main": "",
+  "scripts": {
+    "test": "./node_modules/.bin/_mocha",
+    "test-with-coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --captureExceptions test/ && ./node_modules/.bin/istanbul report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-odaniel/stringextensions.git"
+  },
+  "author": "@sir_castiq",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andela-odaniel/stringextensions/issues"
+  },
+  "homepage": "https://github.com/andela-odaniel/stringextensions#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.14",
+    "eslint": "^3.8.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.2"
+  }
+}
