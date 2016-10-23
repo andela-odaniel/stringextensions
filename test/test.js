@@ -1,7 +1,8 @@
-'use strict'
-let expect = require('chai').expect;
+"use strict";
+
+const expect = require("chai").expect;
 
 
-describe('String Extensions',function(){
-
+describe("String Extensions",() => {
+    
 });
