@@ -6,6 +6,6 @@
  * @returns {Boolean}
  */
 String.prototype.hasVowels = function() {
-    const matchRegex = /[aeiouAEIOU]/g;
+    const matchRegex = new RegExp('[aeiou]','i');
     return matchRegex.test(this);
 };
