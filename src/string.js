@@ -22,7 +22,7 @@ String.prototype.toUpper = function() {
 
     if(lowerCaseCharacters){
         //remove duplicates
-        lowerCaseCharacters = lowerCaseCharacters
+        lowerCaseCharacters
             .filter((character,index) => {
                 return lowerCaseCharacters.indexOf(character) === index; 
             })
