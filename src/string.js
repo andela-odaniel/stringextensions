@@ -38,3 +38,33 @@ String.prototype.toUpper = function() {
 
     return input;
 };
+
+
+/**
+ * Converts the string to solely upper case
+ * 
+ * @returns {String}
+ */
+String.prototype.toLower = function() {
+    let input = this;
+    const matchRegex = /[A-Z]/g;
+    let upperCaseCharacters = input.match(matchRegex);
+
+    if(upperCaseCharacters){
+        //remove duplicates
+        upperCaseCharacters
+            .filter((character,index) => {
+                return upperCaseCharacters.indexOf(character) === index; 
+            })
+            .map((character) => {
+                let asciiValue = character.charCodeAt(0),
+                    //there's a distance of 32 characters between upper case and lower case ascii characters
+                    lowerCaseAsciiValue = asciiValue + 32,
+                    lowerCaseStringValue = String.fromCharCode(lowerCaseAsciiValue);
+                    //replace all occurences of the character with the lower case
+                 input = input.replace(new RegExp(character,"g"),lowerCaseStringValue);
+        })
+    }
+
+    return input;
+};

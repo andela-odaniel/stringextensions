@@ -24,4 +24,14 @@ describe('String Extensions',function(){
             expect(word2.toUpper()).to.equal('THIS IS A STRING');
         })
     })
+    
+    describe('.toLower()', function(){
+        it('should convert a string containing upper case characters to lower case only',function(){
+            let word1 = "THIS IS A STRING";
+            expect(word1.toLower()).to.equal('this is a string');
+
+            let word2 = "This Is A string";
+            expect(word2.toLower()).to.equal('this is a string');
+        })
+    })
 });
