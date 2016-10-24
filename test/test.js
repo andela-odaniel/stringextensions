@@ -21,7 +21,7 @@ describe("String Extensions",() => {
 
     describe(".toUpper()", () => {
 
-        it("should convert a string containing lower case characters to upper case only",() => {
+        it("should convert a string containing lower case characters to upper case only", () => {
 
             const word1 = "this is a string",
                 word2 = "This Is A string";
@@ -36,7 +36,7 @@ describe("String Extensions",() => {
 
     describe(".toLower()", () => {
 
-        it("should convert a string containing upper case characters to lower case only",() => {
+        it("should convert a string containing upper case characters to lower case only", () => {
 
             const word1 = "THIS IS A STRING",
                 word2 = "This Is A string";
@@ -44,6 +44,18 @@ describe("String Extensions",() => {
             expect(word1.toLower()).to.equal("this is a string");
 
             expect(word2.toLower()).to.equal("this is a string");
+
+        });
+
+    });
+
+    describe(".ucFirst()", () => {
+
+        it("should make the first character of the string uppercase if it isn't ", () => {
+
+            let word = "thIS Is a StRING";
+            word = word.ucFirst();
+            expect(word[0]).to.equal("T");
 
         });
 
