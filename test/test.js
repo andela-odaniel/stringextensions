@@ -96,4 +96,18 @@ describe("String Extensions",() => {
 
     });
 
+    describe(".wordCount()", () => {
+
+        it("returns the number of words in a given string", () => {
+
+            const string = "Is this a question?",
+                wordLength = string.wordCount();
+            
+            expect(wordLength).to.be.an("number");
+            expect(wordLength).to.equal(4);
+
+        });
+
+    });
+
 });

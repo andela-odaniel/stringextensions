@@ -143,3 +143,16 @@ Object.defineProperty(String.prototype, "words", {
 
     }
 });
+
+/**
+ * Gets the number of words contained in the string
+ * 
+ * @returns {Number}
+ */
+Object.defineProperty(String.prototype, "wordCount", {
+    value () {
+
+        return this.words().length;
+
+    }
+});
