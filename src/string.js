@@ -5,9 +5,11 @@
  * 
  * @returns {Boolean}
  */
-String.prototype.hasVowels = () => {
+Object.defineProperty(String.prototype, "hasVowels", {
+    value () {
 
-    const matchRegex = new RegExp("[aeiou]","i");
-    return matchRegex.test(this);
+        const matchRegex = new RegExp("[aeiou]","i");
+        return matchRegex.test(this);
 
-};
+    }
+});
