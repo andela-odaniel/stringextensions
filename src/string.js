@@ -124,3 +124,22 @@ Object.defineProperty(String.prototype, "isQuestion", {
 
     }
 });
+
+/**
+ * Gets the words contained in the string
+ * 
+ * @returns {Array}
+ */
+Object.defineProperty(String.prototype, "words", {
+    value () {
+
+        /** the leading "\w" matches word characters
+         *  the "()" says any word will do
+         *  while the + says any character sequence that has at least one match
+         */
+        const matchRegex = /(\w+)/g,
+            matches = this.match(matchRegex);
+        return matches ? matches : [];
+
+    }
+});
