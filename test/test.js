@@ -23,12 +23,12 @@ describe("String Extensions",() => {
 
         it("should convert a string containing lower case characters to upper case only", () => {
 
-            const word1 = "this is a string",
-                word2 = "This Is A string";
+            const string1 = "this is a string",
+                string2 = "This Is A string";
             
-            expect(word1.toUpper()).to.equal("THIS IS A STRING");
+            expect(string1.toUpper()).to.equal("THIS IS A STRING");
 
-            expect(word2.toUpper()).to.equal("THIS IS A STRING");
+            expect(string2.toUpper()).to.equal("THIS IS A STRING");
 
         });
 
@@ -38,12 +38,12 @@ describe("String Extensions",() => {
 
         it("should convert a string containing upper case characters to lower case only", () => {
 
-            const word1 = "THIS IS A STRING",
-                word2 = "This Is A string";
+            const string1 = "THIS IS A STRING",
+                string2 = "This Is A string";
             
-            expect(word1.toLower()).to.equal("this is a string");
+            expect(string1.toLower()).to.equal("this is a string");
 
-            expect(word2.toLower()).to.equal("this is a string");
+            expect(string2.toLower()).to.equal("this is a string");
 
         });
 
@@ -51,11 +51,26 @@ describe("String Extensions",() => {
 
     describe(".ucFirst()", () => {
 
-        it("should make the first character of the string uppercase if it isn't ", () => {
+        it("should make the first character of the string uppercase if it isn't", () => {
 
-            let word = "thIS Is a StRING";
-            word = word.ucFirst();
-            expect(word[0]).to.equal("T");
+            let string = "thIS Is a StRING";
+            string = string.ucFirst();
+            expect(string[0]).to.equal("T");
+
+        });
+
+    });
+
+    describe(".isQuestion()", () => {
+
+        it("checks if the string contains a question", () => {
+
+            const string1 = "Is this a question?",
+                string2 = "This is not a question.";
+            
+            expect(string1.isQuestion()).to.be.true;
+
+            expect(string2.isQuestion()).to.be.false;
 
         });
 

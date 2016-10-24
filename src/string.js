@@ -107,3 +107,20 @@ Object.defineProperty(String.prototype, "ucFirst", {
 
     }
 });
+
+/**
+ * Checks if the string contains a question
+ * 
+ * @returns {Boolean}
+ */
+Object.defineProperty(String.prototype, "isQuestion", {
+    value () {
+
+        /** the leading "\" escapes the "?" which has a special
+         *  meaning (makes the preceding character optional) in regexes
+         */
+        const matchRegex = /\?$/g;
+        return matchRegex.test(this);
+
+    }
+});
