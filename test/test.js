@@ -1,37 +1,52 @@
-'use strict'
-require ('../src/string');
+"use strict";
 
-let expect = require('chai').expect;
+require ("../src/string");
 
+const expect = require("chai").expect;
 
-describe('String Extensions',function(){
+describe("String Extensions",() => {
 
-    describe('.hasVowels()',function(){
-        it('should check if the string contains vowels',function() {
-            let word1 = "apple",
+    describe(".hasVowels()", () => {
+
+        it("should check if the string contains vowels", () => {
+
+            const word1 = "apple",
                 word2 = "crypt";
             expect(word1.hasVowels()).to.be.true;
             expect(word2.hasVowels()).to.be.false;
-        })
-    })
 
-    describe('.toUpper()', function(){
-        it('should convert a string containing lower case characters to upper case only',function(){
-            let word1 = "this is a string";
-            expect(word1.toUpper()).to.equal('THIS IS A STRING');
+        });
 
-            let word2 = "This Is A string";
-            expect(word2.toUpper()).to.equal('THIS IS A STRING');
-        })
-    })
-    
-    describe('.toLower()', function(){
-        it('should convert a string containing upper case characters to lower case only',function(){
-            let word1 = "THIS IS A STRING";
-            expect(word1.toLower()).to.equal('this is a string');
+    });
 
-            let word2 = "This Is A string";
-            expect(word2.toLower()).to.equal('this is a string');
-        })
-    })
+    describe(".toUpper()", () => {
+
+        it("should convert a string containing lower case characters to upper case only",() => {
+
+            const word1 = "this is a string",
+                word2 = "This Is A string";
+            
+            expect(word1.toUpper()).to.equal("THIS IS A STRING");
+
+            expect(word2.toUpper()).to.equal("THIS IS A STRING");
+
+        });
+
+    });
+
+    describe(".toLower()", () => {
+
+        it("should convert a string containing upper case characters to lower case only",() => {
+
+            const word1 = "THIS IS A STRING",
+                word2 = "This Is A string";
+            
+            expect(word1.toLower()).to.equal("this is a string");
+
+            expect(word2.toLower()).to.equal("this is a string");
+
+        });
+
+    });
+
 });
