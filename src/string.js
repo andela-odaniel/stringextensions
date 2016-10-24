@@ -52,3 +52,42 @@ Object.defineProperty(String.prototype, "toUpper", {
 
     }
 });
+
+/**
+ * Converts the string to solely upper case
+ * 
+ * @returns {String}
+ */
+Object.defineProperty(String.prototype, "toLower", {
+    value () {
+
+        let input = this;
+        const matchRegex = /[A-Z]/g,
+            upperCaseCharacters = input.match(matchRegex);
+
+        if (upperCaseCharacters) {
+
+            //remove duplicates
+            upperCaseCharacters
+                .filter((character,index) => {
+
+                    return upperCaseCharacters.indexOf(character) === index;
+
+                })
+                .map((character) => {
+
+                    const asciiValue = character.charCodeAt(0),
+                        //there's a distance of 32 characters between upper case and lower case ascii characters
+                        lowerCaseAsciiValue = asciiValue + 32,
+                        lowerCaseStringValue = String.fromCharCode(lowerCaseAsciiValue);
+                        //replace all occurences of the character with the lower case
+                    input = input.replace(new RegExp(character,"g"),lowerCaseStringValue);
+
+                });
+
+        }
+
+        return input;
+
+    }
+});

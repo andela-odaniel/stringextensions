@@ -34,4 +34,19 @@ describe("String Extensions",() => {
 
     });
 
+    describe(".toLower()", () => {
+
+        it("should convert a string containing upper case characters to lower case only",() => {
+
+            const word1 = "THIS IS A STRING",
+                word2 = "This Is A string";
+            
+            expect(word1.toLower()).to.equal("this is a string");
+
+            expect(word2.toLower()).to.equal("this is a string");
+
+        });
+
+    });
+
 });
