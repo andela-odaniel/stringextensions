@@ -17,7 +17,7 @@ Object.defineProperty(String.prototype, "hasVowels", {
 /**
  * Tests if the string contains vowels
  * 
- * @returns {Boolean}
+ * @returns {String}
  */
 Object.defineProperty(String.prototype, "toUpper", {
     value () {
@@ -54,7 +54,7 @@ Object.defineProperty(String.prototype, "toUpper", {
 });
 
 /**
- * Converts the string to solely upper case
+ * Converts the string to solely lower case
  * 
  * @returns {String}
  */
@@ -88,6 +88,22 @@ Object.defineProperty(String.prototype, "toLower", {
         }
 
         return input;
+
+    }
+});
+
+/**
+ * Makes the first character of the string upper case if it isn't
+ * 
+ * @returns {String}
+ */
+Object.defineProperty(String.prototype, "ucFirst", {
+    value () {
+
+        const matchRegex = /^[a-z]/,
+            matched = this.match(matchRegex);
+        return matched ? this.replace(matchRegex,matched[0].toUpper()) : this;
+
 
     }
 });
