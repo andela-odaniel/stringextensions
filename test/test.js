@@ -76,4 +76,24 @@ describe("String Extensions",() => {
 
     });
 
+    describe(".words()", () => {
+
+        it("returns the words in a given string", () => {
+
+            const string = "Is this a question?",
+                stringWords = string.words();
+            
+            expect(stringWords).to.be.an("array");
+            expect(stringWords.length).to.equal(4);
+
+            stringWords.map((word) => {
+
+                expect(string.indexOf(word)).to.be.above(-1);
+
+            });
+
+        });
+
+    });
+
 });
