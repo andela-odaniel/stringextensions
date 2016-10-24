@@ -13,13 +13,16 @@
         "sourceType": "module"
     },
     "rules": {
-        "prefer-const": "warn",
+        "prefer-const": ["error", {
+                "destructuring": "any",
+                "ignoreReadBeforeAssign": false
+        }],
         "no-var": "warn",
         "no-new-object": "warn",
         "object-shorthand": "warn",
         "quote-props": "warn",
         "no-array-constructor": "warn",
-        "array-callback-return": "warn",
+        "array-callback-return": "off",
         "array-bracket-spacing": "warn",
         "quotes": "warn",
         "prefer-template": "warn",
@@ -35,7 +38,7 @@
         "prefer-spread": "warn",
         "prefer-arrow-callback": "warn",
         "arrow-spacing": "warn",
-        "arrow-body-style": "warn",
+        "arrow-body-style": "off",
         "arrow-parens": "warn",
         "no-confusing-arrow": "warn",
         "no-duplicate-imports": "warn",
@@ -63,7 +66,7 @@
         "constructor-super": "warn",
         "valid-typeof": "warn",
         "object-curly-spacing": "warn",
-        "max-len": "warn",
+        "max-len": "off",
         "comma-style": "warn",
         "semi": "warn",
         "radix": "warn",
