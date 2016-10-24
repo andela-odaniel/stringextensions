@@ -66,13 +66,7 @@
         "constructor-super": "warn",
         "valid-typeof": "warn",
         "object-curly-spacing": "warn",
-        "max-len": ["error", {
-                        "ignoreStrings": true,
-                         "ignoreComments": true,
-                         "ignoreTrailingComments": true,
-                         "ignoreTemplateLiterals": true,
-                         "ignorePattern": true
-                }],
+        "max-len": "off",
         "comma-style": "warn",
         "semi": "warn",
         "radix": "warn",
