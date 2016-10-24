@@ -1,10 +1,11 @@
-'use strict';
+"use strict";
 
 /**
  * Tests if the string contains vowels
  * 
  * @returns {Boolean}
  */
+<<<<<<< HEAD
 String.prototype.hasVowels = function() {
     const matchRegex = /[aeiouAEIOU]/g;
     return matchRegex.test(this);
@@ -38,3 +39,13 @@ String.prototype.toUpper = function() {
 
     return input;
 };
+=======
+Object.defineProperty(String.prototype, "hasVowels", {
+    value () {
+
+        const matchRegex = new RegExp("[aeiou]","i");
+        return matchRegex.test(this);
+
+    }
+});
+>>>>>>> 894d755c5bb9fce0b8d254cafca9fcd9e144c560
