@@ -134,4 +134,16 @@ describe("String Extensions",() => {
 
     });
 
+    describe(".inverseCase()", () => {
+
+        it("inverts the case of characters in the string", () => {
+
+            const string = "aAbbCCdDee",
+                invertedString = string.inverseCase();
+            expect(invertedString).to.equal("AaBBccDdEE");
+            
+        });
+
+    });
+
 });
