@@ -156,3 +156,16 @@ Object.defineProperty(String.prototype, "wordCount", {
 
     }
 });
+
+/**
+ * Formats a number as currency 
+ * 
+ * @returns {String}
+ */
+Object.defineProperty(String.prototype, "toCurrency", {
+    value () {
+
+        return this.replace(/(\d)(?=(\d{3})+(?!\d))/g,"$1,");
+
+    }
+});
