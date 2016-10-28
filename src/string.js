@@ -169,3 +169,16 @@ Object.defineProperty(String.prototype, "toCurrency", {
 
     }
 });
+
+/**
+ * Formats a currency string as numerical 
+ * 
+ * @returns {String}
+ */
+Object.defineProperty(String.prototype, "fromCurrency", {
+    value () {
+
+        return Number(this.replace(/[,]/g,""));
+
+    }
+});
