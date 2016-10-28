@@ -110,4 +110,16 @@ describe("String Extensions",() => {
 
     });
 
+    describe(".toCurrency()", () => {
+
+        it("converts a given string to currency", () => {
+
+            const string = "11111.11",
+                currencyFromString = string.toCurrency();
+            expect(currencyFromString).to.equal("11,111.11");
+            
+        });
+
+    });
+
 });
