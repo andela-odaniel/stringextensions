@@ -122,4 +122,16 @@ describe("String Extensions",() => {
 
     });
 
+    describe(".fromCurrency()", () => {
+
+        it("converts a given currency string to a numerical format", () => {
+
+            const string = "11,111.11",
+                currencyFromString = string.fromCurrency();
+            expect(currencyFromString).to.equal(11111.11);
+            
+        });
+
+    });
+
 });
