@@ -182,9 +182,9 @@ describe("String Extensions",() => {
 
     });
 
-    describe(".numberWords()", () => {
+    describe(".isDigit", () => {
 
-        it("return the text represention of a numerical string", () => {
+        it("checks if a string is a single digit", () => {
 
             const string1 = "12345",
                 string2 = "asfsd",
