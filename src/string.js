@@ -14,40 +14,18 @@ Object.defineProperty(String.prototype, "hasVowels", {
 });
 
 /**
- * Tests if the string contains vowels
+ * Returns an upper case only version of the string
  * 
  * @returns {String}
  */
 Object.defineProperty(String.prototype, "toUpper", {
     value () {
 
-        let input = this;
-        const matchRegex = /[a-z]/g,
-            lowerCaseCharacters = input.match(matchRegex);
+        return this.replace(/[a-z]/g, (match, index) => {
 
-        if (lowerCaseCharacters) {
-
-            //remove duplicates
-            lowerCaseCharacters
-                .filter((character,index) => {
-
-                    return lowerCaseCharacters.indexOf(character) === index;
-
-                })
-                .map((character) => {
-
-                    const asciiValue = character.charCodeAt(0),
-                        //there's a distance of 32 characters between upper case and lower case ascii characters
-                        upperCaseAsciiValue = asciiValue - 32,
-                        uppercaseStringValue = String.fromCharCode(upperCaseAsciiValue);
-                        //replace all occurences of the lower case character with the upper case
-                    input = input.replace(new RegExp(character,"g"),uppercaseStringValue);
-
-                });
-
-        }
-
-        return input;
+            return String.fromCharCode(this.charCodeAt(index) - 32);
+        
+        });
 
     }
 });
