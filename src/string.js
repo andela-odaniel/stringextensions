@@ -71,11 +71,7 @@ Object.defineProperty(String.prototype, "ucFirst", {
 Object.defineProperty(String.prototype, "isQuestion", {
     value () {
 
-        /** the leading "\" escapes the "?" which has a special
-         *  meaning (makes the preceding character optional) in regexes
-         */
-        const matchRegex = /\?$/g;
-        return matchRegex.test(this);
+        return /\?$/.test(this);
 
     }
 });
