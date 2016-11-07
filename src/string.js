@@ -163,13 +163,14 @@ Object.defineProperty(String.prototype, "inverseCase", {
 Object.defineProperty(String.prototype, "alternatingCase", {
     value () {
 
-        return this.replace(/[A-Za-z]/g,(matched,index) => {
+        return this.replace(/^[a-z]/, (match) => {
 
-            return index % 2 ? matched.toUpper() : matched.toLower();
+            return match.toUpper();
 
         });
 
     }
+
 });
 
 /**
@@ -242,5 +243,5 @@ Object.defineProperty(String.prototype, "doubleCheck", {
         return /(\S)\1/g.test(this);
 
     }
-  
+
 });
