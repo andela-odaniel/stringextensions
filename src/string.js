@@ -55,12 +55,14 @@ Object.defineProperty(String.prototype, "toLower", {
 Object.defineProperty(String.prototype, "ucFirst", {
     value () {
 
-        const matchRegex = /^[a-z]/,
-            matched = this.match(matchRegex);
-        return matched ? this.replace(matchRegex,matched[0].toUpper()) : this;
-
+        return this.replace(/^[a-z]/,(match) => {
+    
+            return match.toUpper();
+        
+        });
 
     }
+
 });
 
 /**
