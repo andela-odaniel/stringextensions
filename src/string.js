@@ -199,3 +199,20 @@ Object.defineProperty(String.prototype, "inverseCase", {
 
     }
 });
+
+/**
+ * Formats a currency string as numerical 
+ * 
+ * @returns {String}
+ */
+Object.defineProperty(String.prototype, "alternatingCase", {
+    value () {
+
+        return this.replace(/[A-Za-z]/g,(matched,index) => {
+
+            return index % 2 ? matched.toUpper() : matched.toLower();
+
+        });
+
+    }
+});

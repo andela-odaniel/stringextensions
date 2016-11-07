@@ -146,4 +146,16 @@ describe("String Extensions",() => {
 
     });
 
+    describe(".alternatingCase()", () => {
+
+        it("alternates the case of characters in the string", () => {
+
+            const string = "aabbccddee",
+                alternatedString = string.alternatingCase();
+            expect(alternatedString).to.equal("aAbBcCdDeE");
+            
+        });
+
+    });
+
 });
