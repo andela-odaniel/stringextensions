@@ -107,4 +107,5 @@ Object.defineProperty(String.prototype, "ucFirst", {
         });
 
     }
+    
 });
