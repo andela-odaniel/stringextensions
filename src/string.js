@@ -153,9 +153,9 @@ Object.defineProperty(String.prototype, "inverseCase", {
 Object.defineProperty(String.prototype, "alternatingCase", {
     value () {
 
-        return this.replace(/^[a-z]/, (match) => {
+        return this.replace(/[A-Za-z]/g,(matched,index) => {
 
-            return match.toUpper();
+            return index % 2 ? matched.toUpper() : matched.toLower();
 
         });
 
