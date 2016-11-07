@@ -11,6 +11,7 @@ Object.defineProperty(String.prototype, "hasVowels", {
         return /[aeiou]/ig.test(this);
 
     }
+
 });
 
 /**
@@ -28,6 +29,7 @@ Object.defineProperty(String.prototype, "toUpper", {
         });
 
     }
+
 });
 
 /**
@@ -45,6 +47,7 @@ Object.defineProperty(String.prototype, "toLower", {
         });
 
     }
+    
 });
 
 /**
