@@ -11,7 +11,6 @@ Object.defineProperty(String.prototype, "hasVowels", {
         return /[aeiou]/ig.test(this);
 
     }
-
 });
 
 /**
@@ -29,7 +28,6 @@ Object.defineProperty(String.prototype, "toUpper", {
         });
 
     }
-
 });
 
 /**
@@ -47,7 +45,6 @@ Object.defineProperty(String.prototype, "toLower", {
         });
 
     }
-    
 });
 
 /**
@@ -65,7 +62,6 @@ Object.defineProperty(String.prototype, "ucFirst", {
         });
 
     }
-
 });
 
 /**
@@ -165,7 +161,6 @@ Object.defineProperty(String.prototype, "alternatingCase", {
         });
 
     }
-
 });
 
 /**
@@ -211,7 +206,6 @@ Object.defineProperty(String.prototype, "numberWords", {
         }).trim();
 
     }
-  
 });
 
 /**
@@ -225,7 +219,6 @@ Object.defineProperty(String.prototype, "isDigit", {
         return this.match(/\d/g).length === 1;
 
     }
-  
 });
 
 /**
@@ -240,5 +233,4 @@ Object.defineProperty(String.prototype, "doubleCheck", {
         return /(\S)\1/g.test(this);
 
     }
-
 });
