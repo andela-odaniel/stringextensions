@@ -216,3 +216,26 @@ Object.defineProperty(String.prototype, "alternatingCase", {
 
     }
 });
+
+/**
+ * Formats a currency string as numerical 
+ * 
+ * @returns {String}
+ */
+Object.defineProperty(String.prototype, "getMiddle", {
+    value () {
+
+        //if string is just one character return that character 
+        if (this.length === 1) return this[0];
+
+        //split string into two
+        const regex = new RegExp(`.{${ ~~(this.length / 2) }}`,"g"),
+            matches = this.match(regex);
+            
+        /** if of even length return last letter of first match and first letter of second
+         * else return just the first letter of the second match
+         */
+        return this.length % 2 ? matches[1][0] : matches[0][matches[0].length - 1] + matches[1][0];
+
+    }
+});
