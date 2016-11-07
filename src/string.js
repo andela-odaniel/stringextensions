@@ -103,7 +103,7 @@ Object.defineProperty(String.prototype, "wordCount", {
 });
 
 /**
- * Formats a number as currency 
+ * Formats the given number as currency 
  * 
  * @returns {String}
  */
@@ -116,7 +116,7 @@ Object.defineProperty(String.prototype, "toCurrency", {
 });
 
 /**
- * Formats a currency string as numerical 
+ * Formats the given currency string as numerical 
  * 
  * @returns {String}
  */
@@ -129,7 +129,7 @@ Object.defineProperty(String.prototype, "fromCurrency", {
 });
 
 /**
- * Formats a currency string as numerical 
+ * Returns a version of the string with the cases inverted 
  * 
  * @returns {String}
  */
@@ -146,7 +146,7 @@ Object.defineProperty(String.prototype, "inverseCase", {
 });
 
 /**
- * Formats a currency string as numerical 
+ * Returns a version of the string where the cases alternate per character 
  * 
  * @returns {String}
  */
@@ -164,7 +164,7 @@ Object.defineProperty(String.prototype, "alternatingCase", {
 });
 
 /**
- * Formats a currency string as numerical 
+ * Returns the middle character(s) of the string 
  * 
  * @returns {String}
  */
@@ -187,7 +187,9 @@ Object.defineProperty(String.prototype, "getMiddle", {
 });
 
 /**
- * Formats a currency string as numerical 
+ * Returns a version of the given numerical string
+ * where the numbers are expressed as their text
+ * versions
  * 
  * @returns {String}
  */
@@ -208,9 +210,8 @@ Object.defineProperty(String.prototype, "numberWords", {
 });
 
 /**
- * Formats a currency string as numerical 
- * 
- * @returns {String}
+ * Checks if the string is a single digit
+ * @returns {Boolean}
  */
 Object.defineProperty(String.prototype, "isDigit", {
     value () {
@@ -223,7 +224,8 @@ Object.defineProperty(String.prototype, "isDigit", {
 });
 
 /**
- * Formats a currency string as numerical 
+ * Checks if the string contains two characters repeated
+ * next to each other 
  * 
  * @returns {String}
  */
