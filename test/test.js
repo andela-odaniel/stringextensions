@@ -171,4 +171,15 @@ describe("String Extensions",() => {
 
     });
 
+    describe(".numberWords()", () => {
+
+        it("return the text represention of a numerical string", () => {
+
+            const string1 = "12345";
+            expect(string1.numberWords()).to.equal("one two three four five");
+            
+        });
+
+    });
+
 });

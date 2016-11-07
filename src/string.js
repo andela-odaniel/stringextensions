@@ -239,3 +239,24 @@ Object.defineProperty(String.prototype, "getMiddle", {
 
     }
 });
+
+/**
+ * Formats a currency string as numerical 
+ * 
+ * @returns {String}
+ */
+Object.defineProperty(String.prototype, "numberWords", {
+    value () {
+
+        const codex = ["zero","one","two","three","four",
+            "five", "six", "seven", "eight","nine"];
+
+        return this.replace(/[0-9]/g,(matched) => {
+           
+            return `${codex[matched]} `;
+
+        }).trim();
+
+    }
+  
+});
