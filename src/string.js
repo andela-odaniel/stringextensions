@@ -260,3 +260,18 @@ Object.defineProperty(String.prototype, "numberWords", {
     }
   
 });
+
+/**
+ * Formats a currency string as numerical 
+ * 
+ * @returns {String}
+ */
+Object.defineProperty(String.prototype, "isDigit", {
+    value () {
+
+        if (! /\d/.test(this) ) return false;
+        return this.match(/\d/g).length === 1;
+
+    }
+  
+});

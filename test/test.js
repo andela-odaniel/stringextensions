@@ -182,4 +182,19 @@ describe("String Extensions",() => {
 
     });
 
+    describe(".numberWords()", () => {
+
+        it("return the text represention of a numerical string", () => {
+
+            const string1 = "12345",
+                string2 = "asfsd",
+                string3 = "4";
+            expect(string1.isDigit()).to.be.false;
+            expect(string2.isDigit()).to.be.false;
+            expect(string3.isDigit()).to.be.true;            
+            
+        });
+
+    });
+
 });
