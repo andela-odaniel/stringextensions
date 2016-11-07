@@ -158,4 +158,17 @@ describe("String Extensions",() => {
 
     });
 
+    describe(".getMiddle()", () => {
+
+        it("return the middle character(s) of the string", () => {
+
+            const string1 = "12345",
+                string2 = "123456";
+            expect(string1.getMiddle()).to.equal("3");
+            expect(string2.getMiddle()).to.equal("34");
+            
+        });
+
+    });
+
 });
