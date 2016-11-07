@@ -182,4 +182,19 @@ describe("String Extensions",() => {
 
     });
 
+    describe(".isDigit", () => {
+
+        it("checks if a string is a single digit", () => {
+
+            const string1 = "12345",
+                string2 = "asfsd",
+                string3 = "4";
+            expect(string1.isDigit()).to.be.false;
+            expect(string2.isDigit()).to.be.false;
+            expect(string3.isDigit()).to.be.true;            
+            
+        });
+
+    });
+
 });
