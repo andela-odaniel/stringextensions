@@ -8,8 +8,7 @@
 Object.defineProperty(String.prototype, "hasVowels", {
     value () {
 
-        const matchRegex = new RegExp("[aeiou]","i");
-        return matchRegex.test(this);
+        return /[aeiou]/ig.test(this);
 
     }
 });
