@@ -197,4 +197,19 @@ describe("String Extensions",() => {
 
     });
 
+    describe(".doubleCheck", () => {
+
+        it("checks if a string repeats characters", () => {
+
+            const string1 = "abcdef",
+                string2 = "abcdeef",
+                string3 = "aadbbdss";
+            expect(string1.doubleCheck()).to.be.false;
+            expect(string2.doubleCheck()).to.be.true;
+            expect(string3.doubleCheck()).to.be.true;            
+            
+        });
+
+    });
+
 });

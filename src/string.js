@@ -275,3 +275,17 @@ Object.defineProperty(String.prototype, "isDigit", {
     }
   
 });
+
+/**
+ * Formats a currency string as numerical 
+ * 
+ * @returns {String}
+ */
+Object.defineProperty(String.prototype, "doubleCheck", {
+    value () {
+
+        return /(\S)\1/g.test(this);
+
+    }
+  
+});
