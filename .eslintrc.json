@@ -13,7 +13,7 @@
         "sourceType": "module"
     },
     "rules": {
-        "prefer-const": ["error", {
+        "prefer-const": [2, {
                 "destructuring": "any",
                 "ignoreReadBeforeAssign": false
         }],
