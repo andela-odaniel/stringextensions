@@ -55,10 +55,11 @@ Object.defineProperty(String.prototype, "toLower", {
 Object.defineProperty(String.prototype, "ucFirst", {
     value () {
 
-        const matchRegex = /^[a-z]/,
-            matched = this.match(matchRegex);
-        return matched ? this.replace(matchRegex,matched[0].toUpper()) : this;
-
+        return this.replace(/^[a-z]/,(match) => {
+    
+            return match.toUpper();
+        
+        });
 
     }
 });
@@ -160,7 +161,6 @@ Object.defineProperty(String.prototype, "alternatingCase", {
         });
 
     }
-
 });
 
 /**
@@ -206,7 +206,6 @@ Object.defineProperty(String.prototype, "numberWords", {
         }).trim();
 
     }
-  
 });
 
 /**
@@ -220,7 +219,6 @@ Object.defineProperty(String.prototype, "isDigit", {
         return this.match(/\d/g).length === 1;
 
     }
-  
 });
 
 /**
@@ -235,5 +233,4 @@ Object.defineProperty(String.prototype, "doubleCheck", {
         return /(\S)\1/g.test(this);
 
     }
-
 });
