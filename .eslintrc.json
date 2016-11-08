@@ -57,7 +57,6 @@
         "eol-last": "warn",
         "newline-per-chained-call": "warn",
         "no-whitespace-before-property": "warn",
-        "padded-blocks": "warn",
         "no-const-assign": "warn",
         "no-this-before-super": "warn",
         "no-undef": "warn",
