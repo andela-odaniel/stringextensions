@@ -7,7 +7,7 @@
  */
 String.prototype.hasVowels = function () {
     return /[aeiou]/i.test(this);
-}
+};
 
 /**
  * Returns an upper case only version of the string
@@ -25,7 +25,7 @@ String.prototype.toUpper = function () {
  * 
  * @returns {String}
  */
-String.prototype.toLower = function (){
+String.prototype.toLower = function () {
     return this.replace(/[A-Z]/g, (match, index) => {
         return String.fromCharCode(this.charCodeAt(index) + 32);
     });
