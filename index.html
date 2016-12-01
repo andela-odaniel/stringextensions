@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>String Extensions Testing</title>
+    <script src="./src/string.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script>
+        function runIt() {
+            var sampleText = document.getElementById("sample_text").value;
+            var selectedFunction = document.getElementById("selected_function").value;
+            var result = document.getElementById("result");
+
+            try {
+                var output = String.prototype[selectedFunction].call(sampleText);
+                console.log(output);
+                result.innerHTML = output;
+            } catch (err) {
+                result.innerHTML = "Please select a function from the drop down";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s4"></div>
+            <div class="col s4 card blue darken-4" style="margin-top: 15%">
+                <span style="text-align: center"><h5 style="color: white">Test String Extensions</h5></span>
+                <div class="input-field col s12">
+                    <input id="sample_text" type="text" class="validate" />
+                    <label for="sample_text">Sample Text</label>
+                </div>
+                <div class="input-field col s12">
+                    <label>What Function would you like to test?</label>
+                    <select id="selected_function" class="browser-default" style="margin-top: 40px; margin-bottom: 20px">
+                        <option value="hasVowels">hasVowels</option>
+                        <option value="toUpper">toUpper</option>
+                        <option value="toLower">toLower</option>
+                        <option value="ucFirst">ucFirst</option>
+                        <option value="isQuestion">isQuestion</option>
+                        <option value="words">words</option>
+                        <option value="wordCount">wordCount</option>
+                        <option value="toCurrency">toCurrency</option>
+                        <option value="fromCurrency">fromCurrency</option>
+                        <option value="inverseCase">inverseCase</option>
+                        <option value="alternatingCase">alternatingCase</option>
+                        <option value="getMiddle">getMiddle</option>
+                        <option value="numberWords">numberWords</option>
+                        <option value="isDigit">isDigit</option>
+                        <option value="doubleCheck">doubleCheck</option>
+                    </select>
+                    <button class="waves-effect waves-light btn" onClick="runIt();">button</button>
+                </div>
+                <div class="input-field col s12" style="margin-top: 30px; margin-bottom: 30px; text-align: center">
+                    <span id="result">RESULT</span>
+                </div>
+            </div>
+            <div class="col s4"></div>
+        </div>
+    </div>
+</body>
+</html>
